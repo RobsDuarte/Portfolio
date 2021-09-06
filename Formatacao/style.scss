@@ -1,0 +1,107 @@
+/* variables*/
+$MyFont:'Josefin Sans', sans-serif;
+$PrimaryColor:#000000;
+$SecondaryColor:#FFFAFA;
+$TertinaryColor:#191970;
+$FontSize:25px;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $MyFont;     
+    font-size: $FontSize;    
+}
+body{
+    background-color:$SecondaryColor ;
+}
+
+@mixin col-1 {width: 8.33%;}
+@mixin col-2 {width: 16.66%;}
+@mixin col-3 {width: 25%;}
+@mixin col-4 {width: 33.33%;}
+@mixin col-5 {width: 41.66%;}
+@mixin col-6 {width: 50%;}
+@mixin col-7 {width: 58.33%;}
+@mixin col-8 {width: 66.66%;}
+@mixin col-9 {width: 75%;}
+@mixin col-10 {width: 83.33%;}
+@mixin col-11 {width: 91.66%;}
+@mixin col-12 {width: 100%;}
+
+
+
+header{
+    background-color: $PrimaryColor; 
+    @include col-12;
+    height: 300px; 
+    
+    p{
+        color:$SecondaryColor;
+        text-align: center;
+        padding: 20px 0 0 0;              
+    }
+    h1{
+        color: $SecondaryColor;
+        text-align: center;
+        padding: 100px 0 0 0;
+    }    
+    ul{
+        padding: 20px; 
+        margin-right: 20px; 
+        display:flex;
+        flex-flow: row nowrap; 
+        justify-content: flex-end; 
+        list-style: none;  
+               
+    }  
+    a{    
+        @include col-1;
+        color:$SecondaryColor;
+        text-decoration: none; 
+        padding: 20px;               
+    } 
+}
+
+main{
+    background-color: $SecondaryColor;
+    section{
+        display: flex;
+        flex-flow: row nowrap;
+    }
+}
+
+.content-right{   
+    @include col-4;
+    height:400px;  
+    margin:50px;    
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    opacity: 0;   
+    transform: translateX(-40px); 
+    transition: transform 3s .20s cubic-bezier(0,1,0.3,1),opacity .3s .25s ease-out;         
+    will-change: transform, opacity;    
+}
+
+.content-left{       
+    @extend .content-right;
+    transform: translateX(450px); 
+}
+
+.is-visible{
+    opacity: 1;
+    transform: translateX(200px);
+}
+
+
+.border_between{
+    border-right: 2px solid;
+    border-image-source: linear-gradient(to bottom,$PrimaryColor,$SecondaryColor);
+    border-image-slice: 1;
+}
+
+
+
+
+  
+
+
