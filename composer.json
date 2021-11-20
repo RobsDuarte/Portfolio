@@ -1,0 +1,17 @@
+{
+    "name": "robsduarte/portfolio",
+    "description": "Meu portfolio",
+    "minimun-stability":"stable",
+    "license":"property",
+    "type":"project",
+    "authors":[{
+        "name":"Robson Duarte dos Santos",
+        "email":"robsduar@gmail.com",
+        "role":"Developer"
+    }],
+    "autoload":{
+        "psr-4":{
+            "Source\\":"source/"
+        }
+    }
+}
