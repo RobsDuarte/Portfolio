@@ -14,7 +14,7 @@ class Request
     /**
      * URI da minha requisição
      *
-     * @var array
+     * @var string
      */
     private $URI;
 
@@ -29,10 +29,10 @@ class Request
      * Construtor da classe
      */
     public function __construct()
-    {
-        $this->httpMethod = $_SERVER["REQUEST_METHOD"];
-        $this->URI = $_SERVER["REQUEST_URI"] ?? [];
+    {        
         $this->headers = getallheaders();
+        $this->httpMethod = $_SERVER["REQUEST_METHOD"];
+        $this->URI = $_SERVER["REQUEST_URI"];
     }
 
     /**
@@ -48,7 +48,7 @@ class Request
     /**
      * Método responsável por retornar a URI da página
      *
-     * @return array
+     * @return string
      */
     public function getURI()
     {
