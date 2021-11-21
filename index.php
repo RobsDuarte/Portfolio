@@ -3,9 +3,15 @@
 require __DIR__."/vendor/autoload.php";
 
 use Source\Http\Request;
+use Source\Http\Response;
+use Source\Http\Router;
 
-$teste = new Request();
+define('URL','http://localhost/projetos/portfolio');
 
-echo '<pre>'; print_r($teste->getHeaders()); echo '</pre>';
-echo '<pre>'; print_r($teste->getURI()); echo '</pre>';
-echo '<pre>'; print_r($teste->getHttpMethod()); echo '</pre>';
+$ObjRouter = new Router(URL);
+
+include __DIR__."/Routes/RouteCollection.php";
+
+echo $ObjRouter->run()->sendResponse();
+
+
