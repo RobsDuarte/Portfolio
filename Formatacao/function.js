@@ -5,7 +5,7 @@ function CreateObserverForShowContentRight(){
     const Options = {
         root: null,
         rootMargin:'0px',
-        threshold: .75
+        threshold: .5
     }
     const callback = function(entries) {
         entries.forEach(entry => { 
@@ -29,7 +29,7 @@ function CreateObserverForShowContentLeft(){
     const Options = {
         root: null,
         rootMargin:'0px',
-        threshold:.75
+        threshold:.5
     }
 
     const callback = function(entries){
@@ -50,3 +50,8 @@ function CreateObserverForShowContentLeft(){
     });
 }
 
+function newTab(src)
+{
+   window.open(src,'_blank');
+
+}

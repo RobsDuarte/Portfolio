@@ -1,0 +1,51 @@
+nav {
+  text-align: center;
+  font-size: 1.3em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 10px;
+  background-color: #80e1ff;
+}
+
+nav li {
+  list-style: none;
+  font-weight: 800;
+  padding: inherit;
+}
+
+nav li a {
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav li a svg {
+  width: clamp(30px, 50px, 60px);
+  height: clamp(30px, 50px, 60px);
+  padding: 5px;
+}
+
+nav li a:focus, nav li a:link, nav li a:active, nav li a:visited {
+  color: black;
+}
+
+@media only screen and (min-width: 768px) {
+  nav {
+    -webkit-box-pack: right;
+        -ms-flex-pack: right;
+            justify-content: right;
+  }
+}
+/*# sourceMappingURL=navegation.css.map */

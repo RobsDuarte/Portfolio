@@ -4,15 +4,21 @@ namespace Source\Utils;
 
 Class View
 {
-    private static function getContentView($view)
+    public static function getContentView($view)
     {
         $file = __DIR__."/../../View/".$view.'.html';
         return file_exists($file) ? file_get_contents($file) : '';
     }
 
-    public static function render($view,$vars= [])
+    public static function getContentImage($vars)
+    {        
+        $image = __DIR__."/../../img/".$vars.'.svg';            
+        return file_get_contents($image);
+    }
+
+    public static function render($view,$vars = [])
     {
-        $keys = array_keys($vars);
+        $keys = array_keys($vars);       
         $keys = array_map(
             function($key_element)
             {
@@ -20,6 +26,7 @@ Class View
             }
             ,$keys);
         $content = self::getContentView($view);
-        return str_replace($keys,array_values($keys),$content);
+        
+        return str_replace($keys,array_values($vars),$content);
     }   
 }
