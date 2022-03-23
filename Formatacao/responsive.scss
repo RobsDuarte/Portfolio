@@ -1,0 +1,84 @@
+@media only screen and (min-width:768px)
+{
+    .apresentation{
+        display: flex;
+        justify-content: center;
+        align-items: center;          
+    }
+
+    header{        
+        @include col-12; 
+              
+        section{             
+            height: 50%;
+                                      
+            article{                       
+               height: 100%;
+               display: flex;  
+               flex-direction: column;
+               justify-content: center; 
+               align-items: center;               
+               
+                figure{    
+                    @include col-12;                      
+                    height: 100%;             
+                    display: inherit;
+                    align-items: center;
+                    justify-content: center;                        
+                    
+                    img{
+                        border-radius: 50px;
+                        height: fit-content;
+                    }                                   
+                }
+                div
+                {                    
+                    max-width: 75%;
+                } 
+            }              
+        }       
+    } 
+    main{       
+        section{           
+            flex-flow: row wrap;                     
+        }
+    }  
+    
+    .teste{
+        @include col-2;        
+    }
+}
+
+@media only screen and (min-width:1080px){
+    header
+    {
+        
+        section
+        {
+            @include col-10;                              
+        }
+    }
+    main 
+    {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        section 
+        {           
+            @include col-10;
+            justify-content: center;
+            article
+            {
+                max-width: 41.66%;            
+            }
+        }
+
+    }
+    .apresentation
+    {
+        figure
+        {
+            @include col-5;
+        }
+    }
+}

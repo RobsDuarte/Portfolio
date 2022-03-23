@@ -1,12 +1,11 @@
-
 nav{    
     text-align: center;
     font-size: 1.3em;
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
-    padding: 10px;   
-    background-color: hsl(194, 100%, 75%);
+    padding: 10px;    
+    background-color:$blue-700;    
     
     li
     { 
@@ -17,7 +16,7 @@ nav{
         {
             text-decoration: none;
             display: flex;
-            align-items: center;            
+            align-items: center;              
             svg
             {
                 width: clamp(30px,50px,60px);
@@ -27,7 +26,7 @@ nav{
         } 
         a:focus, a:link,a:active,a:visited
         {
-            color: black;
+            color: $blue-100;
         }               
     } 
 }

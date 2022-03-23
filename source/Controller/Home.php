@@ -21,7 +21,6 @@ Class Home
             'link'          => $link,
             'git'           => $git,
             'git_web_ivana' => $git_web_ivana,
-            'web_ivana'     => $web_ivana,
-            'ifram_ivana'   => $iframe_ivana]);
+            'web_ivana'     => $web_ivana]);
     }
 }
