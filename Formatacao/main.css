@@ -1,0 +1,126 @@
+.C_font {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main {
+  background-color: #091031;
+}
+
+main section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main section article {
+  display: inherit;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main section article p {
+  margin-top: 5px;
+  padding-bottom: 5px;
+  width: 15ch;
+  font-size: 1.3rem;
+  font-style: italic;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 15px;
+  border: 2px solid #6A82F6;
+  background-color: white;
+  color: #091031;
+  background: -webkit-gradient(linear, right top, left top, color-stop(50%, #C7D0FB), color-stop(50%, #091031)) right;
+  background: linear-gradient(to left, #C7D0FB 50%, #091031 50%) right;
+  background-size: 200%;
+  -webkit-transition: .5s ease-out;
+  transition: .5s ease-out;
+}
+
+main section article p:hover {
+  background-position: left;
+  border-color: #6A82F6;
+  color: #C7D0FB;
+}
+
+main section article a:link {
+  text-decoration: none;
+}
+
+main section article iframe {
+  width: 100%;
+  height: 100%;
+  -webkit-box-shadow: 7px -10px 10px 0 #C7D0FB;
+          box-shadow: 7px -10px 10px 0 #C7D0FB;
+  border-radius: 10px;
+}
+
+main section article .iframe_overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 95%;
+  z-index: 5;
+}
+
+.content-right, .content-left {
+  width: 83.33%;
+  height: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: 30px;
+  opacity: 0;
+  -webkit-transform: translateX(-30px);
+          transform: translateX(-30px);
+  -webkit-transition: opacity 0.3s 0.25s ease-out, -webkit-transform 3s 0.2s cubic-bezier(0, 1, 0.3, 1);
+  transition: opacity 0.3s 0.25s ease-out, -webkit-transform 3s 0.2s cubic-bezier(0, 1, 0.3, 1);
+  transition: transform 3s 0.2s cubic-bezier(0, 1, 0.3, 1), opacity 0.3s 0.25s ease-out;
+  transition: transform 3s 0.2s cubic-bezier(0, 1, 0.3, 1), opacity 0.3s 0.25s ease-out, -webkit-transform 3s 0.2s cubic-bezier(0, 1, 0.3, 1);
+  will-change: transform, opacity;
+}
+
+.content-right div, .content-left div {
+  width: 100%;
+  height: 90%;
+}
+
+.content-right div svg, .content-left div svg {
+  width: 100%;
+  height: 100%;
+}
+
+.content-left {
+  -webkit-transform: translateX(30px);
+          transform: translateX(30px);
+}
+
+.is-visible {
+  opacity: 1;
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+}
+/*# sourceMappingURL=main.css.map */
